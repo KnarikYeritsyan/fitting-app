@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['web'])->group(function () {
+    Route::get('/', [\App\Http\Controllers\IndexController::class, 'homePage'])->name('guest');
+    Route::get('/papers', [\App\Http\Controllers\IndexController::class, 'papers'])->name('guest.papers');
+    Route::get('/examples', [\App\Http\Controllers\IndexController::class, 'examples'])->name('guest.examples');
 });
