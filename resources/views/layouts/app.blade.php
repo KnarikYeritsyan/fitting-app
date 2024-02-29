@@ -35,6 +35,7 @@
                     </div>
 
                     <ul class="nav__block">
+                        <li class="nav__list"><a href="{{route('guest.cal-fitting')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.examples') ? 'active' : '' }}">CAL FITTING</a></li>
                         <li class="nav__list"><a href="{{route('guest.examples')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.examples') ? 'active' : '' }}">EXAMPLES</a></li>
                         <li class="nav__list"><a href="{{route('guest.papers')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.papers') ? 'active' : '' }}">PAPERS</a></li>
                         <li class="nav__list"><a href="#" class="nav__link">FORMULAS</a></li>
@@ -60,7 +61,7 @@
                     <a href="{{route('guest.papers')}}">PAPERS</a>
                     <a href="#">FORMULAS</a>
 
-                    <p class="footer__desc">Copyright &copy; 2022 <a href="#">KNARIK</a></p>
+                    <p class="footer__desc">Copyright &copy; {{ now()->year }} <a href="#">KNARIK</a></p>
                     <p><a href="#">Licence</a> | Crafted with <i class="fa-solid fa-heart"></i> for <a
                                 href="#">Knarik</a></p>
                 </div>
