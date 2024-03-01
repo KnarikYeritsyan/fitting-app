@@ -17,7 +17,8 @@ unit = sys.argv[3]
 repeat_units = float(sys.argv[4])
 o_guess = float(sys.argv[5])
 h_guess = float(sys.argv[6])
-Q_guess = float(sys.argv[7])
+h_ps_guess = float(sys.argv[7])
+Q_guess = float(sys.argv[8])
 
 N=repeat_units
 
@@ -84,7 +85,7 @@ if unit=='cal_mol':
 o_max=x_exp[x_exp == min(x_exp)][0]-1
 
 xopt = np.arange(x_exp[x_exp == min(x_exp)][0]-2, x_exp[x_exp == max(x_exp)][0]+3, 0.2, dtype=np.float64)
-myfunc_water = lambdify((T,o,h,p,Q),Cp_func_water(T,o*o_guess,h*h_guess,p*h_guess,Q*Q_guess),'numpy')
+myfunc_water = lambdify((T,o,h,p,Q),Cp_func_water(T,o*o_guess,h*h_guess,p*h_ps_guess,Q*Q_guess),'numpy')
 
 try:
     # pars_water, pcov_water = curve_fit(myfunc_water, x_exp, y_exp, p0=[0.75, 1.0, 1.0, 1.0], bounds=[[0.1, 0.01, 0.01, 0.01], [0.99, 2.0, 2.0, 2.0]])

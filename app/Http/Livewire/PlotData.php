@@ -77,6 +77,10 @@ class PlotData extends Component
 
     function fit_data_finite_N()
     {
+        $this->validate([
+            'data_file_n' => 'required|file|mimes:csv,txt,dat',
+            'repeat_units' => 'required|numeric',
+        ]);
         $this->parseFile();
         $this->output_data_n = [];
         if (!$this->format_error) {

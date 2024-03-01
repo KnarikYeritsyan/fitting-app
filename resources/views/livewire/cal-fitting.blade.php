@@ -6,7 +6,6 @@
             <input class="form-control" type="file" id="formFile" wire:model="data_file" accept=".csv, .txt, .dat">
             @error('data_file') <span class="text-danger">{{ $message }}</span> @enderror
 
-
             <div class="d-flex justify-content-center mt-3" id="switch">
                 <p style="margin-right: 25px">Temperature in</p>
                 <input type="checkbox" class="checkbox" id="chkn" wire:model="temperature" />
@@ -14,7 +13,6 @@
                     <i class="degree-celsius"><b>&#8451;</b></i>
                     <i class="degree-celsius"><b>&#xB0;K</b></i>
                     <div class="ball"></div>
-                </label>
                 </label>
             </div>
 
@@ -45,25 +43,28 @@
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Number of repeat units (amino acid residues)</span>
                 <input type="number" class="form-control m-2 p-2" wire:model="repeat_units">
+                @error('repeat_units') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text m-2 p-2">Initial t_0</span>
+                <span class="input-group-text m-2 p-2">Initial t<sub>0</sub></span>
                 <input type="number" class="form-control m-2 p-2" wire:model="init_t0">
+                @error('init_t0') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Initial h</span>
                 <input type="number" class="form-control m-2 p-2" wire:model="init_h">
+                @error('init_h') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text m-2 p-2">Initial h_ps</span>
+                <span class="input-group-text m-2 p-2">Initial h<sub>PS</sub></span>
                 <input type="number" class="form-control m-2 p-2" wire:model="init_h_ps">
+                @error('init_h_ps') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Initial Q</span>
                 <input type="number" class="form-control m-2 p-2" wire:model="init_Q">
+                @error('init_Q') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
-
-
         </div>
 
         <div class="table-wrapper-scroll-y my-custom-scrollbar">
@@ -72,7 +73,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Temperature [K]</th>
-                    <th scope="col">Heat Capacity</th>
+                    <th scope="col">Heat Capacity [J/mol]</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -95,10 +96,10 @@
         </div>
 
 
-        <button wire:click="fit_data_finite_N" type="button" class="btn btn-primary m-4" wire:loading.attr="disabled">
+        <button wire:click="fit_cal_data" type="button" class="btn btn-primary m-4" wire:loading.attr="disabled">
             Start fitting
         </button>
-        <div wire:loading wire:target="fit_data_finite_N">
+        <div wire:loading wire:target="fit_cal_data">
 
             Fitting...
 
@@ -127,10 +128,10 @@
             if(e.detail.output_data['error_message']) {
                 document.getElementById('myChartn').innerHTML = "";
                 document.getElementById('mytablen').innerHTML = "";
-                document.getElementById('fit-errorn').innerHTML = '<h5 class="alert text-bg-danger text-center"><i class="fa-solid fa-triangle-exclamation"></i> '+e.detail.output_data_n['error_message']+'</h5>';
+                document.getElementById('fit-errorn').innerHTML = '<h5 class="alert text-bg-danger text-center"><i class="fa-solid fa-triangle-exclamation"></i> '+e.detail.output_data['error_message']+'</h5>';
             }else {
                 if(e.detail.output_data['warning_message']){
-                    document.getElementById('fit-warningn').innerHTML = '<h6 class="alert text-bg-warning text-center"><i class="fa-solid fa-circle-exclamation"></i> '+e.detail.output_data_n['warning_message']+'</h6>'
+                    document.getElementById('fit-warningn').innerHTML = '<h6 class="alert text-bg-warning text-center"><i class="fa-solid fa-circle-exclamation"></i> '+e.detail.output_data['warning_message']+'</h6>'
                 }
                 let graph = document.getElementById('myChartn');
                         {{--let xopt = {!! $output_data['xopt'] !!};--}}
@@ -163,12 +164,12 @@
 
 
                 let layout = {
-                    title: 'Helicity degree',
+                    title: 'Heat Capacity',
                     xaxis: {
                         title: '<b>Temperature [K]</b>',
                     },
                     yaxis: {
-                        title: '<b>C_p</b>',
+                        title: '<b>C<sub>p</sub> [J/mol]</b>',
                     },
                     dragmode: 'pan',
                     font: {
@@ -217,8 +218,8 @@
                     type: 'table',
                     header: {
                         values: [
-                            ["t<sub>0</sub>, K"],
-                            ["h, J mol<sup>-1</sup>"], ["h<sub>ps</sub>, J mol<sup>-1</sup>"], ["Q"], ["σ"], ["R<sup>2</sup>"]],
+                            ["t<sub>0</sub> [K]"],
+                            ["h [J/mol]"], ["h<sub>ps</sub> [J/mol]"], ["Q"], ["σ"], ["R<sup>2</sup>"]],
                         align: ["center"],
                         line: {width: 1, color: '#506784'},
                         fill: {color: '#119DFF'},

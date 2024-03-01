@@ -31,6 +31,13 @@ class CalFitting extends Component
 
     ];
 
+    protected $validationAttributes = [
+        'init_t0' => 'Initial value for t0',
+        'init_h' => 'Initial value for h',
+        'init_h_ps' => 'Initial value for h_ps',
+        'init_Q' => 'Initial value for Q'
+    ];
+
     public function save()
     {
         $this->validate();
@@ -78,14 +85,22 @@ class CalFitting extends Component
         }
     }
 
-    function fit_data_finite_N()
+    function fit_cal_data()
     {
-        $this->parseFile();
+        $this->validate([
+            'data_file' => 'required|file|mimes:csv,txt,dat',
+            'repeat_units' => 'required|numeric',
+            'init_t0' => 'required|numeric',
+            'init_h' => 'required|numeric',
+            'init_h_ps' => 'required|numeric',
+            'init_Q' => 'required|numeric',
+        ]);
+//        $this->parseFile();
         $this->output_data = [];
         if (!$this->format_error) {
             $pythonpath = base_path('fit-cal-water-model.py');
             $path = $this->data_file->getRealPath();
-            $process = new Process(['python3', $pythonpath, $path, $this->temperature, $this->unit, $this->repeat_units,$this->init_t0,$this->init_h,$this->init_Q]);
+            $process = new Process(['python3', $pythonpath, $path, $this->temperature, $this->unit, $this->repeat_units,$this->init_t0,$this->init_h,$this->init_h_ps,$this->init_Q]);
             $process->run();
 
 // executes after the command finishes
@@ -101,7 +116,17 @@ class CalFitting extends Component
                 $output['yopt'] = explode(',', $output['yopt']);
                 $output['xexp'] = explode(',', $output['xexp']);
                 $output['yexp'] = explode(',', $output['yexp']);
+
+                $data = [];
+                foreach ($output['xexp'] as $key=>$dat)
+                {
+                    $data[$key][0]=floatval($output['xexp'][$key]);
+                    $data[$key][1]=floatval($output['yexp'][$key]);
+                }
+                $this->csv_data = $data;
+
             }
+
             $this->output_data = $output;
             $this->dispatchBrowserEvent('contentChanged', ['output_data' => $this->output_data]);
         }
