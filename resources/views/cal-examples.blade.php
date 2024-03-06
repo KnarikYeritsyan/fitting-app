@@ -35,7 +35,7 @@
 
         <div class="min__container">
 
-            <livewire:cal-fitting />
+            <livewire:cal-examples />
             <livewire:contact />
 
         </div>

@@ -29,4 +29,10 @@ class IndexController extends Controller
 //        return view('welcome',compact('categories'));
         return view('cal-fitting');
     }
+
+    function cal_examples()
+    {
+//        return view('welcome',compact('categories'));
+        return view('cal-examples');
+    }
 }

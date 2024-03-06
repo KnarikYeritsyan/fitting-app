@@ -37,6 +37,7 @@
                     <ul class="nav__block">
                         <li class="nav__list"><a href="{{route('guest.cal-fitting')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.examples') ? 'active' : '' }}">CAL FITTING</a></li>
                         <li class="nav__list"><a href="{{route('guest.examples')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.examples') ? 'active' : '' }}">EXAMPLES</a></li>
+                        <li class="nav__list"><a href="{{route('guest.cal-examples')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.cal-examples') ? 'active' : '' }}">CAL EXAMPLES</a></li>
                         <li class="nav__list"><a href="{{route('guest.papers')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.papers') ? 'active' : '' }}">PAPERS</a></li>
                         <li class="nav__list"><a href="#" class="nav__link">FORMULAS</a></li>
                     </ul>

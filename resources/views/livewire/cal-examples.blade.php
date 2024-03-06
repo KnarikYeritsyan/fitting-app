@@ -1,14 +1,48 @@
+<div>
 <div class="main__middle">
+
     <div class="main__middle__left">
 
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            @foreach($contents as $cont=>$content)
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-heading{{str_replace(' ', '', $cont)}}">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{str_replace(' ', '', $cont)}}" aria-expanded="true" aria-controls="panelsStayOpen-collapse{{str_replace(' ', '', $cont)}}">
+                            <i style="margin-right: 8px;" class="fa-solid fa-folder"></i> {{$cont}}
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse{{str_replace(' ', '', $cont)}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{str_replace(' ', '', $cont)}}">
+                        <div class="accordion-body">
+                            @foreach($content as $con=>$file)
+                                <i class="fa-solid fa-file"></i> {{$file['name']}}
+                                <button class="btn btn-outline-success" wire:click="try_example('{{$cont.'/'.$file['name']}}','{{$file['temperature']}}',{{$file['length']}},{{$file['t_0_guess']}},{{$file['h_guess']}},{{$file['p_guess']}},{{$file['Q_guess']}},'{{isset($file['unit'])?$file['unit']:'j_mol'}}')">Apply</button>
+                                <a download="{{$file['name']}}" href="{{ Storage::url('cal-examples/'.$cont.'/'.$file['name']) }}" title="Download data file">Download <i style="margin-left: 5px;" class="fa-solid fa-file-arrow-down"></i></a>
+                                <br>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
+        </div>
+
+    </div>
+
+    <div class="main__middle__right">
         <div class="form__block">
             <p>Data file (.csv, .txt, .dat)</p>
-            <input class="form-control" type="file" id="formFile" wire:model="data_file" accept=".csv, .txt, .dat">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Browse...</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="No file selected." wire:model="data_file" disabled>
+            </div>
             @error('data_file') <span class="text-danger">{{ $message }}</span> @enderror
+
 
             <div class="d-flex justify-content-center mt-3" id="switch">
                 <p style="margin-right: 25px">Temperature in</p>
-                <input type="checkbox" class="checkbox" id="chkn" wire:model="temperature" />
+                <input type="checkbox" class="checkbox" id="chkn" wire:model="temperature" disabled/>
                 <label class="label" for="chkn">
                     <i class="degree-celsius"><b>&#8451;</b></i>
                     <i class="degree-celsius"><b>&#xB0;K</b></i>
@@ -16,55 +50,56 @@
                 </label>
             </div>
 
-            <div class="d-flex justify-content-center">
-                <p style="margin-right: 25px">Heat Capacity Unit</p>
-            <div class="btn-group">
-                <input type="radio" class="btn-check" name="unit" wire:model="unit" id="kj_mol" value="kj_mol" autocomplete="off" checked />
-                <label class="btn btn-primary" for="kj_mol" data-mdb-ripple-init>kJ/mol</label>
-
-                <input type="radio" class="btn-check" name="unit" wire:model="unit" id="j_mol" value="j_mol" autocomplete="off" />
-                <label class="btn btn-primary" for="j_mol" data-mdb-ripple-init>J/mol</label>
-
-                <input type="radio" class="btn-check" name="unit" wire:model="unit" id="kcal_mol" value="kcal_mol" autocomplete="off" />
-                <label class="btn btn-primary" for="kcal_mol" data-mdb-ripple-init>kcal/mol</label>
-
-                <input type="radio" class="btn-check" name="unit" wire:model="unit" id="cal_mol" value="cal_mol" autocomplete="off" />
-                <label class="btn btn-primary" for="cal_mol" data-mdb-ripple-init>cal/mol</label>
-            </div>
-            </div>
-
             @if($format_error)
                 <h6 class="alert text-bg-danger text-center"><i class="fa-solid fa-triangle-exclamation"></i> {{$format_error}} <a href="{{route('guest.examples')}}">see examples</a> </h6>
         @endif
+
+            <div class="d-flex justify-content-center">
+                <p style="margin-right: 25px">Heat Capacity Unit</p>
+                <div class="btn-group">
+                    <input type="radio" class="btn-check" name="unit" wire:model="unit" id="kj_mol" value="kj_mol" autocomplete="off" checked />
+                    <label class="btn btn-primary" for="kj_mol" data-mdb-ripple-init>kJ/mol</label>
+
+                    <input type="radio" class="btn-check" name="unit" wire:model="unit" id="j_mol" value="j_mol" autocomplete="off" />
+                    <label class="btn btn-primary" for="j_mol" data-mdb-ripple-init>J/mol</label>
+
+                    <input type="radio" class="btn-check" name="unit" wire:model="unit" id="kcal_mol" value="kcal_mol" autocomplete="off" />
+                    <label class="btn btn-primary" for="kcal_mol" data-mdb-ripple-init>kcal/mol</label>
+
+                    <input type="radio" class="btn-check" name="unit" wire:model="unit" id="cal_mol" value="cal_mol" autocomplete="off" />
+                    <label class="btn btn-primary" for="cal_mol" data-mdb-ripple-init>cal/mol</label>
+                </div>
+            </div>
 
         <!--<button type="button" class="form__block__btn">UPLOAD FILE</button>-->
             <button  wire:click="parseFile" type="button" class="btn btn-success m-2" wire:loading.attr="disabled">Upload file</button>
 
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Number of repeat units (amino acid residues)</span>
-                <input type="number" class="form-control m-2 p-2" wire:model="repeat_units">
+                <input type="number" class="form-control m-2 p-2" wire:model="repeat_units" disabled>
                 @error('repeat_units') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Initial t<sub>0</sub></span>
-                <input type="number" class="form-control m-2 p-2" wire:model="init_t0">
+                <input type="number" class="form-control m-2 p-2" wire:model="init_t0" disabled>
                 @error('init_t0') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Initial h</span>
-                <input type="number" class="form-control m-2 p-2" wire:model="init_h">
+                <input type="number" class="form-control m-2 p-2" wire:model="init_h" disabled>
                 @error('init_h') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Initial h<sub>PS</sub></span>
-                <input type="number" class="form-control m-2 p-2" wire:model="init_h_ps">
+                <input type="number" class="form-control m-2 p-2" wire:model="init_h_ps" disabled>
                 @error('init_h_ps') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Initial Q</span>
-                <input type="number" class="form-control m-2 p-2" wire:model="init_Q">
+                <input type="number" class="form-control m-2 p-2" wire:model="init_Q" disabled>
                 @error('init_Q') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
+
         </div>
 
         <div class="table-wrapper-scroll-y my-custom-scrollbar">
@@ -110,14 +145,13 @@
         {{--Fitting...--}}
         {{--</button>--}}
 
-    </div>
-
-    <div class="main__middle__right">
         <div id="fit-errorn"></div>
         <div id="fit-warningn"></div>
         <div id="myChartn" style="width:600px;max-height:600px;"></div>
         <div id="mytablen" style="max-height: 300px"></div>
     </div>
+
+
 
     {{--@if(isset($output_data['r_squared']))--}}
     <script>
@@ -241,4 +275,5 @@
         });
     </script>
     {{--@endif--}}
+</div>
 </div>

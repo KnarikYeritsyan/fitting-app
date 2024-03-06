@@ -146,19 +146,19 @@
                 let yopt = e.detail.output_data_n['yopt'];
 
                 let trace1 = {
-                    x: xopt,
-                    y: yopt,
-                    mode: 'lines',
-                    type: 'scatter',
-                    name: 'fit',
-                };
-
-                let trace2 = {
                     x: xexp,
                     y: yexp,
                     mode: 'markers',
                     type: 'scatter',
                     name: 'exp',
+                };
+
+                let trace2 = {
+                    x: xopt,
+                    y: yopt,
+                    mode: 'lines',
+                    type: 'scatter',
+                    name: 'fit',
                 };
 
 
@@ -175,7 +175,8 @@
                         family: "Courier New, monospace",
                         size: 18,
                         // color: "RebeccaPurple"
-                    }
+                    },
+                    colorway : ['#ff7f0e','#1f77b4']
                 };
 
                 let config = {
