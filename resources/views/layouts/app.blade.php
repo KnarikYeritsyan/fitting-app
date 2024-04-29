@@ -35,11 +35,11 @@
                     </div>
 
                     <ul class="nav__block">
-                        <li class="nav__list"><a href="{{route('guest.cal-fitting')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.examples') ? 'active' : '' }}">CAL FITTING</a></li>
+                        <li class="nav__list"><a href="{{route('guest.cd-fitting')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.cd-fitting') ? 'active' : '' }}">CD</a></li>
+                        <li class="nav__list"><a href="{{route('guest.cal-fitting')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.cal-fitting') ? 'active' : '' }}">DSC</a></li>
                         <li class="nav__list"><a href="{{route('guest.examples')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.examples') ? 'active' : '' }}">EXAMPLES</a></li>
                         <li class="nav__list"><a href="{{route('guest.cal-examples')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.cal-examples') ? 'active' : '' }}">CAL EXAMPLES</a></li>
-                        <li class="nav__list"><a href="{{route('guest.papers')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.papers') ? 'active' : '' }}">PAPERS</a></li>
-                        <li class="nav__list"><a href="#" class="nav__link">FORMULAS</a></li>
+                        <li class="nav__list"><a href="{{route('guest.formulas-and-papers')}}" class="nav__link {{ (Route::currentRouteName() == 'guest.formulas-and-papers') ? 'active' : '' }}">FORMULAS and PAPERS</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,13 +58,14 @@
         <div class="footer__bottom">
             <div class="footer__left">
                 <div class="footer__text">
+                    <a href="{{route('guest.cd-fitting')}}">CD</a>
+                    <a href="{{route('guest.cal-fitting')}}">DSC</a>
                     <a href="{{route('guest.examples')}}">EXAMPLES</a>
-                    <a href="{{route('guest.papers')}}">PAPERS</a>
-                    <a href="#">FORMULAS</a>
+                    <a href="{{route('guest.formulas-and-papers')}}">FORMULAS and PAPERS</a>
 
                     <p class="footer__desc">Copyright &copy; {{ now()->year }} <a href="#">KNARIK</a></p>
-                    <p><a href="#">Licence</a> | Crafted with <i class="fa-solid fa-heart"></i> for <a
-                                href="#">Knarik</a></p>
+                    <p><a href="#">Licence</a> | Crafted with <i class="fa-solid fa-heart"></i> for YOU
+                        {{--<a href="#">Knarik</a></p>--}}
                 </div>
             </div>
             <div class="footer__right">

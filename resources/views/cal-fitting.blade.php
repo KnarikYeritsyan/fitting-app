@@ -7,11 +7,11 @@
 @section('slider')
     <div class="banner">
 
-        <h2 class="banner__title">Fitting, Plotting, win!</h2>
+        <h2 class="banner__title">CD and DSC processing</h2>
 
         <p class="banner__desc">
-            A responsive one page website,
-            designed & developed exclusively for online Fitting.
+            A responsive online tool,
+            designed & developed for online Fitting of CD and DSC data.
         </p>
 
         <button type="button" class="banner__btn">GO TO FITTING</button>

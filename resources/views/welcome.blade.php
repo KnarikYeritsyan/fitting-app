@@ -7,11 +7,11 @@
 @section('slider')
     <div class="banner">
 
-        <h2 class="banner__title">Fitting, Plotting, win!</h2>
+        <h2 class="banner__title">CD and DSC processing</h2>
 
         <p class="banner__desc">
-            A responsive one page website,
-            designed & developed exclusively for online Fitting.
+            A responsive online tool,
+            designed & developed for online Fitting of CD and DSC data.
         </p>
 
         <button type="button" class="banner__btn">GO TO FITTING</button>
@@ -32,11 +32,9 @@
             <article class="article">
                 <div class="icon__block"><i class="fa-solid fa-pen-ruler"></i></div>
                 <div class="article__block">
-                    <h3 class="article__title">EASILY CUSTOMISED</h3>
-                    <p class="article__desc">Easily customise Sedna to suit your start up,
-                        portfolio or product. Take advantage of the layered Sketch file
-                        and bring your product to life.
-
+                    <h3 class="article__title">WHAT OFFERS</h3>
+                    <p class="article__desc">The online tool offers users the ability to upload and analyze circular dichroism (CD) and differential scanning calorimetry (DSC) data.
+                        Users can visualize their data, obtain fitting parameters, and download results.
                     </p>
                 </div>
 
@@ -45,9 +43,11 @@
             <article class="article">
                 <div class="icon__block"><i class="fa-solid fa-lightbulb"></i></div>
                 <div class="article__block">
-                    <h3 class="article__title">MODERN DESIGN</h3>
-                    <p class="article__desc">Designed with modern trends and techniques
-                        in mind, Sedna will help your product stand out in an already saturated market.
+                    <h3 class="article__title">INPUT DATA</h3>
+                    <p class="article__desc">
+                        Accepts experimental data files in CSV, TXT, or DAT formats with two columns: the independent variable (temperature) and the corresponding dependent variable (CD or DSC signal).
+                        Users can adjust units for different experimental setups.
+
 
                     </p>
                 </div>
@@ -57,11 +57,9 @@
             <article class="article">
                 <div class="icon__block"><i class="fa-brands fa-react"></i></div>
                 <div class="article__block">
-                    <h3 class="article__title">RESPONSIVE DEVELOPMENT</h3>
-                    <p class="article__desc"> Built using the latest web teachnologies
-                        like html5, css3, and jQuery, rest assured Sedna will look
-                        smashing on every device under the sun.
-
+                    <h3 class="article__title">THE FITTING MODEL</h3>
+                    <p class="article__desc">  It employs the Zimm-Bragg model with solvent effects for fitting, utilizing Python's scipy library.
+                        <a href="#" class="arrow__link">Example datasets</a> and <a href="#" class="arrow__link">theoretical explanations</a> are provided for guidance.
                     </p>
                 </div>
 
@@ -73,21 +71,6 @@
     </div>
 
     <div class="min__container">
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Large N</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Small N</button>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <livewire:fit-data />
-            </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <livewire:plot-data />
-            </div>
-        </div>
-
 
 
         <livewire:contact />

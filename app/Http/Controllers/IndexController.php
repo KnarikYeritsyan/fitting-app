@@ -24,6 +24,11 @@ class IndexController extends Controller
         return view('examples');
     }
 
+    function cd_fitting()
+    {
+        return view('cd-fitting');
+    }
+
     function cal_fitting()
     {
 //        return view('welcome',compact('categories'));
