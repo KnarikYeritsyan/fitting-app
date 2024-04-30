@@ -31,13 +31,12 @@ class PlotData extends Component
         'data_file_n' => 'Data File'
     ];
 
-    public function save()
-    {
-        $this->validate();
-
+//    public function save()
+//    {
+//        $this->validate();
         // store the csv under the local filesytem, defined in config/filesystems.php
-        $this->data_file_n->store('csv', 'local');
-    }
+//        $this->data_file_n->store('csv', 'local');
+//    }
 
 
     function parseFile()

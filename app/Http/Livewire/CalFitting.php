@@ -38,14 +38,6 @@ class CalFitting extends Component
         'init_Q' => 'Initial value for Q'
     ];
 
-    public function save()
-    {
-        $this->validate();
-
-        // store the csv under the local filesytem, defined in config/filesystems.php
-        $this->data_file->store('csv', 'local');
-    }
-
     function parseFile()
     {
         $this->validate();

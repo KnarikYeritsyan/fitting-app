@@ -34,14 +34,6 @@ class CalExamples extends Component
         'data_file.required' => 'Please select one of the examples.',
     ];
 
-    public function save()
-    {
-        $this->validate();
-
-        // store the csv under the local filesytem, defined in config/filesystems.php
-        $this->data_file->store('csv', 'local');
-    }
-
     function try_example($file, $temp, $length, $init_t0, $init_h, $init_h_ps, $init_Q,$unit){
 //        dd($file);
         $this->data_file=$file;

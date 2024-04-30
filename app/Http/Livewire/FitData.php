@@ -31,15 +31,6 @@ class FitData extends Component
         'data_file' => 'Data File',
     ];
 
-    public function save()
-    {
-        $this->validate();
-
-        // store the csv under the local filesytem, defined in config/filesystems.php
-        $this->data_file->store('csv', 'local');
-    }
-
-
     function parseFile()
     {
         $this->validate();
