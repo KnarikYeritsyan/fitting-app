@@ -17,7 +17,7 @@ class PlotData extends Component
     public $csv_data;
     public $csv_header_cols = [];
     public $csv_fields;
-    public $repeat_units = 50;
+    public $repeat_units;
     public $fileHasHeader = true;
     public $output_data_n=[];
     public $format_error;

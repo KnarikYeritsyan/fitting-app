@@ -26,7 +26,7 @@
 
             <div class="input-group mb-3">
                 <span class="input-group-text m-2 p-2">Number of repeat units (amino acid residues)</span>
-                <input type="number" class="form-control m-2 p-2" value="50" wire:model="repeat_units">
+                <input type="number" class="form-control m-2 p-2" value="" wire:model="repeat_units">
                 @error('repeat_units') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 

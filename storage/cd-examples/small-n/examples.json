@@ -1,0 +1,61 @@
+{
+    "Scholtz et al":[
+      {
+        "name": "scoltz-14.csv",
+        "temperature":true,
+        "length":14
+      },
+      {
+        "name": "scoltz-20.csv",
+        "temperature":true,
+        "length":20
+      },
+      {
+        "name": "scoltz-26.csv",
+        "temperature":true,
+        "length":26
+      },
+      {
+        "name": "scoltz-32.csv",
+        "temperature":true,
+        "length":32
+      },
+      {
+        "name": "scoltz-38.csv",
+        "temperature":true,
+        "length":38
+      },
+      {
+        "name": "scoltz-50.csv",
+        "temperature":true,
+        "length":50
+      }
+      ],
+    "Wang et al":[
+      {
+        "name": "wang-et-al-spe1.csv",
+        "temperature":false,
+        "length":14
+      },
+      {
+        "name": "wang-et-al-spe2.csv",
+        "temperature":false,
+        "length":19
+      },
+      {
+        "name": "wang-et-al-spe3.csv",
+        "temperature":false,
+        "length":24
+      },
+      {
+        "name": "wang-et-al-spe4.csv",
+        "temperature":false,
+        "length":29
+      },
+      {
+        "name": "wang-et-al-spe5.csv",
+        "temperature":false,
+        "length":34
+      }
+    ]
+}

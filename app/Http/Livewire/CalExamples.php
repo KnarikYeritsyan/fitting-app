@@ -58,7 +58,7 @@ class CalExamples extends Component
     function parseFile()
     {
         $this->validate();
-        $path = storage_path('app/public/cal-examples/'.$this->data_file);
+        $path = storage_path('cal-examples/'.$this->data_file);
         $pythonpath = base_path('read-cal-data.py');
         $process = new Process(['python3',$pythonpath,$path,$this->temperature,$this->unit]);
         $process->run();
@@ -139,7 +139,7 @@ class CalExamples extends Component
 
     public function render()
     {
-        $dir = storage_path('app/public/cal-examples/');
+        $dir = storage_path('cal-examples/');
         $contents = json_decode(file_get_contents($dir.'examples.json'),true);
         return view('livewire.cal-examples',compact('contents','dir'));
     }

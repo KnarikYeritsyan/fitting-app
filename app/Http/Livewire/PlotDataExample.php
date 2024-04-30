@@ -54,7 +54,7 @@ class PlotDataExample extends Component
     function parseFile()
     {
         $this->validate();
-        $path = storage_path('app/public/examples/small-n/'.$this->data_file_n);
+        $path = storage_path('cd-examples/small-n/'.$this->data_file_n);
         $pythonpath = base_path('read-data.py');
         $process = new Process(['python3',$pythonpath,$path,$this->temperature]);
         $process->run();
@@ -117,7 +117,7 @@ class PlotDataExample extends Component
 
     public function render()
     {
-        $dir = storage_path('app/public/examples/small-n/');
+        $dir = storage_path('cd-examples/small-n/');
         $contents = json_decode(file_get_contents($dir.'examples.json'),true);
         return view('livewire.plot-data-example',compact('contents','dir'));
     }

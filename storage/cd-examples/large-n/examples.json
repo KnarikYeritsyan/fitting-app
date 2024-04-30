@@ -1,0 +1,54 @@
+{
+    "Go et al":[
+      {
+        "name": "go-et-al-1.dat",
+        "temperature":false
+      },
+      {
+        "name": "go-et-al-2.dat",
+        "temperature":false
+      },
+      {
+        "name": "go-et-al-3.dat",
+        "temperature":false
+      }
+      ],
+    "Seelig et al":[
+      {
+        "name": "seelig-et-al-1.dat",
+        "temperature":false
+      },
+      {
+        "name": "seelig-et-al-2.dat",
+        "temperature":false
+      }
+    ],
+    "Aznauryan et al":[
+      {
+        "name": "aznauryan-et-al-1.dat",
+        "temperature":false
+      }
+    ],
+    "Bryson et al":[
+      {
+        "name": "bryson-et-al-1.dat",
+        "temperature":false
+      },
+      {
+        "name": "bryson-et-al-2.dat",
+        "temperature":false
+      },
+      {
+        "name": "bryson-et-al-3.dat",
+        "temperature":false
+      },
+      {
+        "name": "bryson-et-al-4.dat",
+        "temperature":false
+      },
+      {
+        "name": "bryson-et-al-5.dat",
+        "temperature":false
+      }
+  ]
+}

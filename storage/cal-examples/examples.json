@@ -1,0 +1,329 @@
+{
+    "Athi et al":[
+      {
+        "name": "athi-2005-dsc.csv",
+        "temperature":false,
+        "length":67,
+        "h_guess":3000,
+        "p_guess":3000,
+        "Q_guess":150,
+        "t_0_guess":215
+      }
+      ],
+    "Bruscolini et al":[
+      {
+        "name": "Bruscolini-2011-fig1a.csv",
+        "temperature":false,
+        "length":58,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      },
+      {
+        "name": "Bruscolini-2011-fig1b.csv",
+        "temperature":false,
+        "length":57,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":215
+      }
+    ],
+    "Carra et al":[
+      {
+        "name": "carra-cal-fig3.csv",
+        "temperature":false,
+        "length":164,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      },
+      {
+        "name": "carra-fig2-ph2.8.csv",
+        "temperature":false,
+        "length":164,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":250.0,
+        "t_0_guess":225
+      },
+      {
+        "name": "carra-fig2-ph3.0.csv",
+        "temperature":false,
+        "length":164,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":250.0,
+        "t_0_guess":225
+      },
+      {
+        "name": "carra-fig2-ph3.3.csv",
+        "temperature":false,
+        "length":164,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":250.0,
+        "t_0_guess":225
+      },
+      {
+        "name": "carra-fig2-ph3.5.csv",
+        "temperature":false,
+        "length":164,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":250.0,
+        "t_0_guess":230
+      },
+      {
+        "name": "carra-fig2-ph3.7.csv",
+        "temperature":false,
+        "length":164,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":250.0,
+        "t_0_guess":240
+      }
+    ],
+    "Fung et al":[
+      {
+        "name": "fung-jacs-dsc.csv",
+        "temperature":false,
+        "length":62,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      }
+    ],
+    "Garcia-Hernandez et al":[
+      {
+        "name": "hernandez-1997-cal-ph1.1.csv",
+        "temperature":false,
+        "length":162,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":245
+      }
+    ],
+    "Godoy-Ruiz et al":[
+      {
+        "name": "ruiz-2008-fig3.csv",
+        "temperature":false,
+        "length":35,
+        "h_guess":4000.0,
+        "p_guess":4000.0,
+        "Q_guess":150.0,
+        "t_0_guess":215
+      }
+    ],
+    "Mazurenko et al":[
+      {
+        "name": "mazurenko-2017-fig6.csv",
+        "temperature":true,
+        "unit":"kj_mol",
+        "length":58,
+        "h_guess":4000.0,
+        "p_guess":4000.0,
+        "Q_guess":250.0,
+        "t_0_guess":225
+      }
+    ],
+    "Munoz et al":[
+      {
+        "name": "munoz-2004-fig2a.csv",
+        "temperature":false,
+        "length":104,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":250
+      }
+    ],
+    "Privalov et al 1986":[
+      {
+        "name": "privalov-1986-ph3.9.csv",
+        "temperature":false,
+        "length":153,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      },
+      {
+        "name": "privalov-1986-ph4.08.csv",
+        "temperature":false,
+        "length":153,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      },
+      {
+        "name": "privalov-1986-ph4.2.csv",
+        "temperature":false,
+        "length":153,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      },
+      {
+        "name": "privalov-1986-ph4.44.csv",
+        "temperature":false,
+        "length":153,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":220
+      }
+    ],
+    "Privalov et al 2007":[
+      {
+        "name": "privalov-2007-fig3a.csv",
+        "temperature":false,
+        "length":81,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":210
+      },
+      {
+        "name": "privalov-2007-1a-ph1.8.csv",
+        "temperature":false,
+        "length":110,
+        "h_guess":4500.0,
+        "p_guess":4500.0,
+        "Q_guess":350.0,
+        "t_0_guess":180
+      },
+      {
+        "name": "privalov-2007-1a-ph2.5.csv",
+        "temperature":false,
+        "length":110,
+        "h_guess":4500.0,
+        "p_guess":4500.0,
+        "Q_guess":350.0,
+        "t_0_guess":180
+      },
+      {
+        "name": "privalov-2007-1a-ph2.8.csv",
+        "temperature":false,
+        "length":110,
+        "h_guess":4500.0,
+        "p_guess":4500.0,
+        "Q_guess":350.0,
+        "t_0_guess":180
+      },
+      {
+        "name": "privalov-2007-1a-ph3.45.csv",
+        "temperature":false,
+        "length":110,
+        "h_guess":4500.0,
+        "p_guess":4500.0,
+        "Q_guess":350.0,
+        "t_0_guess":180
+      },
+      {
+        "name": "privalov-2007-1a-ph5.5.csv",
+        "temperature":false,
+        "length":110,
+        "h_guess":4500.0,
+        "p_guess":4500.0,
+        "Q_guess":350.0,
+        "t_0_guess":180
+      },
+      {
+        "name": "privalov-2007-1b-ph2.0.csv",
+        "temperature":false,
+        "length":76,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":210
+      },
+      {
+        "name": "privalov-2007-1b-ph2.5.csv",
+        "temperature":false,
+        "length":76,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":210
+      },
+      {
+        "name": "privalov-2007-1b-ph3.0.csv",
+        "temperature":false,
+        "length":76,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":230
+      },
+      {
+        "name": "privalov-2007-1b-ph3.5.csv",
+        "temperature":false,
+        "length":76,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":240
+      },
+      {
+        "name": "privalov-2007-1b-ph4.0.csv",
+        "temperature":false,
+        "length":76,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":240
+      }
+    ],
+    "Richardson et al":[
+      {
+        "name": "richardson-2000-fig1a.csv",
+        "temperature":false,
+        "length":113,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":215
+      }
+    ],
+    "Seelig et al":[
+      {
+        "name": "seelig-cal-2016-fig7.csv",
+        "temperature":true,
+        "unit":"kcal_mol",
+        "length":245,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":210
+      },
+      {
+        "name": "seelig-cal-2016-fig8.csv",
+        "temperature":true,
+        "unit":"kcal_mol",
+        "length":129,
+        "h_guess":5000.0,
+        "p_guess":5000.0,
+        "Q_guess":450.0,
+        "t_0_guess":230
+      }
+    ],
+    "Stephen Leharne":[
+      {
+        "name": "stephen-2016-fig1.csv",
+        "temperature":false,
+        "unit":"kj_mol",
+        "length":76,
+        "h_guess":3000.0,
+        "p_guess":3000.0,
+        "Q_guess":150.0,
+        "t_0_guess":225
+      }
+    ]
+}

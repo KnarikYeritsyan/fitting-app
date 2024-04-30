@@ -43,7 +43,7 @@ class FitDataExample extends Component
     function parseFile()
     {
         $this->validate();
-        $path = storage_path('app/public/examples/large-n/'.$this->data_file);
+        $path = storage_path('cd-examples/large-n/'.$this->data_file);
         $pythonpath = base_path('read-data.py');
         $process = new Process(['python3',$pythonpath,$path,$this->temperature]);
         $process->run();
@@ -107,7 +107,7 @@ class FitDataExample extends Component
 
     public function render()
     {
-        $dir = storage_path('app/public/examples/large-n/');
+        $dir = storage_path('cd-examples/large-n/');
         $contents = json_decode(file_get_contents($dir.'examples.json'),true);
         return view('livewire.fit-data-example',compact('contents','dir'));
     }
