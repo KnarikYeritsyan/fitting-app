@@ -17,7 +17,7 @@ class CalFitting extends Component
     public $csv_data;
     public $csv_header_cols = [];
     public $csv_fields;
-    public $repeat_units = 100;
+    public $repeat_units;
     public $init_t0;
     public $init_h;
     public $init_h_ps;
@@ -32,9 +32,9 @@ class CalFitting extends Component
     ];
 
     protected $validationAttributes = [
-        'init_t0' => 'Initial value for t0',
+        'init_t0' => 'Initial value for t<sub>0</sub>',
         'init_h' => 'Initial value for h',
-        'init_h_ps' => 'Initial value for h_ps',
+        'init_h_ps' => 'Initial value for h<sub>ps</sub>',
         'init_Q' => 'Initial value for Q'
     ];
 

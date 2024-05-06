@@ -1,23 +1,7 @@
 @extends('layouts.app')
 
 @section('slider')
-    <div class="banner">
-
-        <h2 class="banner__title">Fitting, Plotting, win!</h2>
-
-        <p class="banner__desc">
-            A responsive one page website,
-            designed & developed exclusively for online Fitting.
-        </p>
-
-        <button type="button" class="banner__btn">GO TO FITTING</button>
-
-        <button type="button" class="banner__btn">LEARN MORE</button>
-
-        <div class="arrow">
-            <a href="" class="arrow__link"><i class="fa-solid fa-angles-down"></i></a>
-        </div>
-    </div>
+    @include('layouts.slider')
 @endsection
 
 @section('content')
