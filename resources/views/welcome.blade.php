@@ -4,6 +4,10 @@
     <script src="js/plotly-2.12.1.min.js"></script>
 @endsection
 
+@section('bottomscript')
+    <script id="MathJax-script" async src="js/tex-chtml.js"></script>
+@endsection
+
 @section('slider')
     <div class="banner">
 

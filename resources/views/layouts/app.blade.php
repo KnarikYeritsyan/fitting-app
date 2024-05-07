@@ -88,7 +88,7 @@
 <script src="js/script.js"></script>
 {{--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>--}}
 {{--<script id="MathJax-script" async src="js/tex-mml-chtml.js"></script>--}}
-<script id="MathJax-script" async src="js/tex-chtml.js"></script>
+@yield('bottomscript')
 @livewireScripts
 </body>
 </html>
