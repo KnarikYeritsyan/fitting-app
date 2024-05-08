@@ -63,7 +63,7 @@
                 <div class="article__block">
                     <h3 class="article__title">THE FITTING MODEL</h3>
                     <p class="article__desc">  It employs the Zimm-Bragg model with solvent effects for fitting, utilizing Python's scipy library.
-                        <a href="#" class="arrow__link">Example datasets</a> and <a href="#" class="arrow__link">theoretical explanations</a> are provided for guidance.
+                        <a href="{{route('guest.examples')}}" class="arrow__link">Example datasets</a> and <a href="{{route('guest.formulas-and-papers')}}" class="arrow__link">theoretical explanations</a> are provided for guidance.
                     </p>
                 </div>
 
