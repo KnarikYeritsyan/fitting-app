@@ -45,10 +45,17 @@
         Z(\widetilde{s},\sigma,N)=\lambda_1^N
         \end{equation}
 
-        The degree of helicity is:
+        The general degree of helicity is:
 
         \begin{equation} \label{Degreeofhelsolventfinal}
-        \theta(\widetilde{s},\sigma, N)=\frac{\widetilde{s}+\sigma}{N}\frac{\partial\ln Z}{\partial \widetilde{s}},
+        \theta(\widetilde{s},\sigma, N)=\frac{\widetilde{s}+\sigma}{N}\frac{\partial\ln Z}{\partial \widetilde{s}}
+        \end{equation}
+
+        The helicity degree for long chains is:
+
+        \begin{equation} \label{DegreeofHelZBsolventLongFinal}
+        \theta(\sigma,\widetilde{s})=\frac{\widetilde{s}+\sigma}{1+\widetilde{s}+\sqrt{(1-\widetilde{s})^2+4\sigma\widetilde{s}}}
+        \left(1+\frac{2\sigma-1+\widetilde{s}}{\sqrt{(1-\widetilde{s})^2+4\sigma\widetilde{s}}}\right).
         \end{equation}
 
         To pass to the Hamiltonian representation of Zimm-Bragg model in order to include solvent effects, we need to replace Zimm-Bragg model's \(\sigma\) and \(\widetilde{s}\) parameters:
@@ -61,12 +68,17 @@
         \widetilde{s}(t,t_0,h,h_{ps},Q,q)=\frac{1}{Q}\left[\left(e^{-\frac{h}{R(t-t_{0})}}+\frac{e^{\frac{h_{ps}-h}{R(t-t_0)}}-e^{-\frac{h}{R(t-t_{0})}}}{q}\right)^{-2}-1\right],
         \end{equation}
 
-        The fitting parameters are: \(t_0\), \(h\), \(h_{ps}\), \(Q\).<br>
+        The final expression for heat capacity is:
 
         \begin{equation}\label{heat-capacity-with-solvent}
         C_V=-2Nh\frac{\partial\theta}{\partial T}+\frac{2Nh_{ps}^2
         e^{h_{ps}/T}(q-1)}{T^2\left(q+e^{h_{ps}/T}-1\right)^2}(1-\theta)+\frac{2Nh_{ps} e^{h_{ps}/T}}{\left(q+e^{h_{ps}/T}-1\right)}\frac{\partial\theta}{\partial T}.
         \end{equation}
+
+        The fitting parameters and their units are in the following table:
+
+        \begin{array} {|c|c|}\hline t_0 & h & h_{ps} & Q \\ \hline K & J/mol & J/mol & 1 \\ \hline  \end{array}
+
 
     </div>
 

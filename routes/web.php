@@ -17,6 +17,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/', [\App\Http\Controllers\IndexController::class, 'homePage'])->name('guest');
     Route::get('/formulas-and-papers', [\App\Http\Controllers\IndexController::class, 'papers'])->name('guest.formulas-and-papers');
     Route::get('/examples', [\App\Http\Controllers\IndexController::class, 'examples'])->name('guest.examples');
+    Route::get('/cd-examples', [\App\Http\Controllers\IndexController::class, 'cd_examples'])->name('guest.cd-examples');
     Route::get('/cal-examples', [\App\Http\Controllers\IndexController::class, 'cal_examples'])->name('guest.cal-examples');
     Route::get('/cd-fitting', [\App\Http\Controllers\IndexController::class, 'cd_fitting'])->name('guest.cd-fitting');
     Route::get('/cal-fitting', [\App\Http\Controllers\IndexController::class, 'cal_fitting'])->name('guest.cal-fitting');

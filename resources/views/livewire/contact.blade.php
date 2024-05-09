@@ -1,4 +1,4 @@
-<div class="input__block">
+<div class="input__block mt-5">
     <h3 class="input__block__title">Get started with online fitting, absolutely free</h3>
     <!--<p class="input__block__desc">Grab your copy today, exclusively from Codrops</p>-->
     @error('email') <span class="text-danger">{{ $message }}</span> @enderror
