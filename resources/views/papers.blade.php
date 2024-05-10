@@ -83,7 +83,7 @@
     </div>
 
     <div class="row-cols-1 p-5">
-        [1] <a href="https://doi.org/10.1073/pnas.45.11.1601" target="_blank">Determination of the parameters for helix formation in poly-\(\gamma\)-benzyl-L-glutamate</a><br>
+        [1] <a href="https://doi.org/10.1063/1.1730390" target="_blank">Theory of the Phase Transition between Helix and Random Coil in Polypeptide Chain</a><br>
         [2] <a href="https://doi.org/10.1038/s42004-021-00499-x" target="_blank">Implicit water model within the Zimm-Bragg
             approach to analyze experimental data for heat and cold denaturation of proteins</a><br>
         [3] <a href="https://doi.org/10.3389/fnano.2022.982644" target="_blank">Processing helix-coil transition data: account of chain length and solvent effects</a><br>
