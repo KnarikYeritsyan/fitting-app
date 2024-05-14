@@ -53,6 +53,19 @@
 
             </article>
         </section>
+        <h5 class="mt-5 mb-5 d-flex justify-content-center text-danger">
+            By utilizing WaterProd for your analysis, you acknowledge the importance of citing the publications that outline the original methods and reference data employed, along with referencing the specific papers associated with WaterProd:
+        </h5>
+        Badasyan, A., Tonoyan, S., Valant, M., & Grdadolnik, J. (2021). Implicit water model within the Zimm-Bragg approach to analyze experimental data for heat and cold denaturation of proteins. Communications chemistry, 4(1), 57.
+        <a href="https://doi.org/10.1038/s42004-021-00499-x" target="_blank">DOI</a>
+        <br>
+        <br>
+        Yeritsyan, K., Valant, M., & Badasyan, A. (2022). Processing helix–coil transition data: Account of chain length and solvent effects. Frontiers in Nanotechnology, 4, 982644.
+        <a href="https://doi.org/10.3389/fnano.2022.982644" target="_blank">DOI</a>
+        <br>
+        <br>
+        Badasyan, A. (2021). System size dependence in the zimm–bragg model: Partition function limits, transition temperature and interval. Polymers, 13(12), 1985.
+        <a href="https://doi.org/10.3390/polym13121985" target="_blank">DOI</a>
     </div>
 
     <div class="min__container">

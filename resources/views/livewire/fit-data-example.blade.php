@@ -63,7 +63,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Temperature [K]</th>
-                    <th scope="col">Helicity degree</th>
+                    <th scope="col">Order parameter (Helicity degree)</th>
                 </tr>
                 </thead>
                 <tbody>

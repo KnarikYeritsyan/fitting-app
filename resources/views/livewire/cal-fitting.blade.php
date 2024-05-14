@@ -169,7 +169,7 @@
                         title: '<b>Temperature [K]</b>',
                     },
                     yaxis: {
-                        title: '<b>C<sub>p</sub> [J/mol]</b>',
+                        title: '<b>C<sub>p</sub>/N [J/mol]</b>',
                     },
                     dragmode: 'pan',
                     font: {

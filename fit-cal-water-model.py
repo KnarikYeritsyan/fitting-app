@@ -101,7 +101,7 @@ try:
     Q_error=100 * perr_water[3] / abs(pars_water[3])
     yopt_water = myfunc_water(xopt,*pars_water)
 except:
-    print_data['error_message'] = 'Could not fit data, please check if the data is correct'
+    print_data['error_message'] = 'Could not fit data, please check if the data is correct. Try also changing initial values of parameters.'
     print(json.dumps(print_data))
     exit()
 
@@ -113,7 +113,7 @@ try: r_squared_water
 except NameError: r_squared_water = None
 
 if r_squared_water is None:
-    print_data['error_message'] = 'Could not fit data, please check if the data is correct'
+    print_data['error_message'] = 'Could not fit data, please check if the data is correct. Try also changing initial values of parameters.'
 else:
     print_data.update({'fit_params': {}})
     print_data.update({'fit_params_errors': {}})
@@ -132,7 +132,7 @@ else:
     print_data['xopt']=pd.Series(xopt).to_json(orient='values')
     print_data['yopt']=pd.Series(yopt_water).to_json(orient='values')
     if o_error>50 or h_error>50 or p_error>50 or Q_error>50:
-        print_data['warning_message'] = 'One or more parameters errors are large, please check the data again!'
+        print_data['warning_message'] = 'One or more parameters errors are large, please check the data again! Try also changing initial values of parameters.'
 
 def show_data():
     return print(json.dumps(print_data))

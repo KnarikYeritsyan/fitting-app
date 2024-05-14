@@ -62,14 +62,16 @@
                     <a href="{{route('guest.examples')}}">EXAMPLES</a>
                     <a href="{{route('guest.formulas-and-papers')}}">FORMULAS and PAPERS</a>
 
-                    <p class="footer__desc">Copyright &copy; {{ now()->year }} <a href="#">KNARIK</a></p>
-                    <p><a href="#">Licence</a> | Crafted with <i class="fa-solid fa-heart"></i> for YOU
+                    {{--<p class="footer__desc">  All rights reserved.</p>--}}
+                    <p class="footer__desc">The research was done by K. Yeritsyan and A. Badasyan within the PhD project</p>
+                    <p>The website was developed by K. Yeritsyan, &copy; {{ now()->year }} WaterProd. All rights reserved.</p>
+                    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
                         {{--<a href="#">Knarik</a></p>--}}
                 </div>
             </div>
             <div class="footer__right">
                 <div class="footer__link">
-                    <p>SHARE THIS WITH YOUR FRIENDS</p>
+                    <p>For inquiries, contact us at</p>
 
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
                     <a href="" class="footer__a"><i class="fa-brands fa-facebook-f"></i></a>

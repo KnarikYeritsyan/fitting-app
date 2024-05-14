@@ -122,6 +122,15 @@ class CalExamples extends Component
                 }
                 $this->csv_data = $data;
 
+                foreach ($output['yexp'] as $key=>$dat)
+                {
+                    $output['yexp'][$key]=$output['yexp'][$key]/$this->repeat_units;
+                }
+                foreach ($output['yopt'] as $key=>$dat)
+                {
+                    $output['yopt'][$key]=$output['yopt'][$key]/$this->repeat_units;
+                }
+
             }
 
             $this->output_data = $output;
