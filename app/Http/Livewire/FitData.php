@@ -23,7 +23,7 @@ class FitData extends Component
     public $format_error;
 
     public $rules = [
-        'data_file' => 'required|file|mimes:csv,txt,dat',
+        'data_file' => 'required|file|mimes:csv,txt,dat|max:1024',
 
     ];
 

@@ -23,7 +23,7 @@ class PlotData extends Component
     public $format_error;
 
     public $rules = [
-        'data_file_n' => 'required|file|mimes:csv,txt,dat',
+        'data_file_n' => 'required|file|mimes:csv,txt,dat|max:1024',
 
     ];
 
