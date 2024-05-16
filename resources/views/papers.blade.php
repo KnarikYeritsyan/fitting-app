@@ -20,7 +20,7 @@
 <main id="main">
 
     <div class="min__container mt-5">
-        <h5>The formulas according to with the fittings were done are in this page. Please cite the literature if used.</h5>
+        <h5 class="text-primary">The formulas according to with the fittings were done are in this page. Please cite the literature if used.</h5>
         The characteristic equation for standard Zimm-Bragg model is [1]:
         \begin{equation}\label{characteristicequation}
         \lambda^{2}-(s+1)\lambda+s(1-\sigma)=0

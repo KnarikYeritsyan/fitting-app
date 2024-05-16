@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fitting</title>
+    <link rel="icon" type="image/png" href="/images/faveicon.png">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap@5.2.0-beta1.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -30,7 +31,7 @@
                 <nav class="nav" id="menu">
                     <div class="logo">
                         <a href="{{route('guest')}}" class="logo__link">
-                            <h1 class="h1">F<span class="logo__span">it</span>ti<span class="logo__span">ng</span></h1>
+                            <h1 class="h1">F<span class="logo__span">it</span>F<span class="logo__span">old</span>D<span class="logo__span">ata</span></h1>
                         </a>
                     </div>
 
@@ -64,7 +65,8 @@
 
                     {{--<p class="footer__desc">  All rights reserved.</p>--}}
                     <p class="footer__desc">The research was done by K. Yeritsyan and A. Badasyan within the PhD project</p>
-                    <p>The website was developed by K. Yeritsyan, &copy; {{ now()->year }} WaterProd. All rights reserved.</p>
+                    <p>Materials Research Laboratory, University of Nova Gorica, Slovenia</p>
+                    <p>The website was developed by K. Yeritsyan, &copy; {{ now()->year }} FitFoldData. All rights reserved.</p>
                     <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
                         {{--<a href="#">Knarik</a></p>--}}
                 </div>
@@ -73,6 +75,7 @@
                 <div class="footer__link">
                     <p>For inquiries, contact us at</p>
 
+                    <a href="mailto:knarik.yeritsyan@gmail.com?subject=FitFoldData"><i class="fa-solid fa-envelope"></i></a>
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
                     <a href="" class="footer__a"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>

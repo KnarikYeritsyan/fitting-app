@@ -25,7 +25,8 @@ body {
 
 #header {
   width: 100%;
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/background-with-graphs.png);
+  /*background-image: url(../images/background.jpg);*/
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -114,7 +115,7 @@ body {
 .section {
   display: flex;
   justify-content: space-between;
-  margin-top: 110px;
+  /*margin-top: 110px;*/
   flex-wrap: wrap; }
   .section .article {
     width: 30%;
