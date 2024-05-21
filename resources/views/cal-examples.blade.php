@@ -15,7 +15,7 @@
         <div class="min__container">
 
             <livewire:cal-examples />
-            <livewire:contact />
+            {{--<livewire:contact />--}}
 
         </div>
 

@@ -32,7 +32,7 @@
                 <livewire:plot-data />
             </div>
         </div>
-            <livewire:contact />
+            {{--<livewire:contact />--}}
         </div>
 
     </main>

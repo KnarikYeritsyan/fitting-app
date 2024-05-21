@@ -20,7 +20,7 @@
         <div class="min__container">
 
             <livewire:cal-fitting />
-            <livewire:contact />
+            {{--<livewire:contact />--}}
 
         </div>
 

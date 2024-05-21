@@ -15,7 +15,7 @@
 @section('content')
 
 <main id="main">
-    <div class="max__container">
+    <div class="max__container mb-5">
         <div class="d-flex justify-content-center">
         <img src="/images/logo450x450.png" width="250px">
         </div>
@@ -71,12 +71,9 @@
         <a href="https://doi.org/10.3390/polym13121985" target="_blank">DOI</a>
     </div>
 
-    <div class="min__container">
-
-
-        <livewire:contact />
-
-    </div>
+    {{--<div class="min__container">--}}
+        {{--<livewire:contact />--}}
+    {{--</div>--}}
 
 </main>
 

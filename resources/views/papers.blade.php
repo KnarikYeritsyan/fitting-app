@@ -91,11 +91,9 @@
         [5] <a href="" target="_blank">Differential Scanning Calorimetry of proteins and Zimm-Bragg model in water</a>
     </div>
 
-    <div class="min__container mt-5">
-
-        <livewire:contact />
-
-    </div>
+    {{--<div class="min__container mt-5">--}}
+        {{--<livewire:contact />--}}
+    {{--</div>--}}
 
 </main>
 

@@ -28,9 +28,7 @@
             </div>
         </div>
 
-
-
-        <livewire:contact />
+        {{--<livewire:contact />--}}
 
     </div>
 
