@@ -56,7 +56,7 @@
                 @error('init_h') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text m-2 p-2">Initial h<sub>PS</sub></span>
+                <span class="input-group-text m-2 p-2">Initial h<sub>ps</sub></span>
                 <input type="number" class="form-control m-2 p-2" wire:model="init_h_ps">
                 @error('init_h_ps') <span class="text-danger">{!! html_entity_decode($message) !!}</span> @enderror
             </div>

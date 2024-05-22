@@ -157,7 +157,7 @@
                         title: '<b>Temperature [K]</b>',
                     },
                     yaxis: {
-                        title: '<b>Θ</b>',
+                        title: '<b>𝜃</b>',
                     },
                     dragmode: 'pan',
                     font: {
