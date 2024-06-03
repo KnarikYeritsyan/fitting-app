@@ -153,13 +153,26 @@ change permissions
 sudo chmod -R 777 /var/www/html/fitting-app/storage/logs
 sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/sessions
 sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/views
-sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/cache/
+sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/cache
+sudo chmod -R 777 /var/www/html/fitting-app/storage/app
 sudo chmod -R 777 /var/www/html/fitting-app/public
 sudo chmod -R 777 /var/www/html/fitting-app/public/assets/
 sudo chmod -R 777 /var/www/html/fitting-app/bootstrap/cache
+#php artisan storage:link
 ```
 install nodejs lts
 ```
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - &&\
 apt-get install -y nodejs
+```
+
+install python packages
+```
+apt install python3-numpy
+apt install python3-pandas
+apt install python3-sympy
+apt install python3-scipy
+apt install python3-json
+apt install python3-sys
+apt install python3-os
 ```

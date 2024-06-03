@@ -46,4 +46,12 @@ class IndexController extends Controller
 //        return view('welcome',compact('categories'));
         return view('cal-examples');
     }
+
+    public function cal_download($dir,$file){
+        return response()->download(storage_path('cal-examples/'.$dir.'/'.$file));
+    }
+
+    public function cd_download($method,$dir,$file){
+        return response()->download(storage_path('cd-examples/'.$method.'/'.$dir.'/'.$file));
+    }
 }

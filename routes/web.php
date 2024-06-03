@@ -21,4 +21,6 @@ Route::middleware(['web'])->group(function () {
     Route::get('/cal-examples', [\App\Http\Controllers\IndexController::class, 'cal_examples'])->name('guest.cal-examples');
     Route::get('/cd-fitting', [\App\Http\Controllers\IndexController::class, 'cd_fitting'])->name('guest.cd-fitting');
     Route::get('/cal-fitting', [\App\Http\Controllers\IndexController::class, 'cal_fitting'])->name('guest.cal-fitting');
+    Route::get('/cal-download/{dir}/{file}', [\App\Http\Controllers\IndexController::class, 'cal_download'])->name('cal-download');
+    Route::get('/cd-download/{method}/{dir}/{file}', [\App\Http\Controllers\IndexController::class, 'cd_download'])->name('cd-download');
 });

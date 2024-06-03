@@ -14,7 +14,7 @@
                             @foreach($content as $con=>$file)
                                 <i class="fa-solid fa-file"></i> {{$file['name']}}
                                 <button class="btn btn-outline-success" wire:click="try_example('{{$cont.'/'.$file['name']}}','{{$file['temperature']}}')">Apply</button>
-                                <a download="{{$file['name']}}" href="{{ Storage::url('examples/large-n/'.$cont.'/'.$file['name']) }}" title="Download data file">Download <i style="margin-left: 5px;" class="fa-solid fa-file-arrow-down"></i></a>
+                                <a href="{!! route('cd-download',['method' => 'large-n','dir'=>$cont,'file'=>$file['name']]) !!}" title="Download data file">Download <i style="margin-left: 5px;" class="fa-solid fa-file-arrow-down"></i></a>
                                 <br>
                             @endforeach
                         </div>

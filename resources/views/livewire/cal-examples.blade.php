@@ -16,7 +16,7 @@
                             @foreach($content as $con=>$file)
                                 <i class="fa-solid fa-file"></i> {{$file['name']}}
                                 <button class="btn btn-outline-success" wire:click="try_example('{{$cont.'/'.$file['name']}}','{{$file['temperature']}}',{{$file['length']}},{{$file['t_0_guess']}},{{$file['h_guess']}},{{$file['p_guess']}},{{$file['Q_guess']}},'{{isset($file['unit'])?$file['unit']:'j_mol'}}')">Apply</button>
-                                <a download="{{$file['name']}}" href="{{ Storage::url('cal-examples/'.$cont.'/'.$file['name']) }}" title="Download data file">Download <i style="margin-left: 5px;" class="fa-solid fa-file-arrow-down"></i></a>
+                                <a href="{!! route('cal-download',['dir'=>$cont,'file'=>$file['name']]) !!}" title="Download data file">Download <i style="margin-left: 5px;" class="fa-solid fa-file-arrow-down"></i></a>
                                 <br>
                             @endforeach
                         </div>
