@@ -28,7 +28,7 @@ systemctl restart apache2
 enable module - sudo a2enmod name_of_module
 disable module - sudo a2dismod name_of_module
 ```
-- **[Install PHP on Debian server](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu)**
+- **[Install PHP 8.3 on Debian server](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu)**
 
 ```
 # check server release
@@ -50,6 +50,33 @@ sudo apt-get install php8.3-dom
 # Web Server Integration 
 sudo a2enmod php8.3
 sudo systemctl restart apache2
+php --version
+```
+
+- **[Install PHP 8.2 on Debian server](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu)**
+
+```
+# check server release
+lsb_release -a
+# Save existing php package list to packages.txt file
+sudo dpkg -l | grep php | tee packages.txt
+# Add Ondrej's repo source and signing key along with dependencies
+sudo apt install apt-transport-https
+sudo curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
+sudo apt update
+# Install PHP 8.2 for Apache
+sudo apt install libapache2-mod-php8.2
+# Install PHP 8.2 Packages 
+sudo apt install php8.2-common php8.2-cli php8.2-fpm php8.2-{curl,bz2,mbstring,intl}
+# Install PHP 8.2 Extensions 
+sudo apt-get install php8.2-xml
+sudo apt-get install php8.2-dom
+sudo apt-get install php8.2-zip
+# Web Server Integration 
+sudo a2enmod php8.2
+sudo systemctl restart apache2
+apt-get install --yes zip unzip 
 php --version
 ```
 
@@ -126,6 +153,7 @@ change permissions
 sudo chmod -R 777 /var/www/html/fitting-app/storage/logs
 sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/sessions
 sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/views
+sudo chmod -R 777 /var/www/html/fitting-app/storage/framework/cache/
 sudo chmod -R 777 /var/www/html/fitting-app/public
 sudo chmod -R 777 /var/www/html/fitting-app/public/assets/
 sudo chmod -R 777 /var/www/html/fitting-app/bootstrap/cache

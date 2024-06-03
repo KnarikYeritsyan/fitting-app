@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fitting</title>
     <link rel="icon" type="image/png" href="/images/faveicon.png">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap@5.2.0-beta1.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/bootstrap@5.2.0-beta1.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!--<script src="js/chart.min.js"></script>-->
     @yield('topscript')
     @livewireStyles
@@ -86,8 +86,8 @@
 
 
 <!--<script src="js/jquery-v3.6.0.min.js"></script>-->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/script.js"></script>
 {{--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>--}}
 {{--<script id="MathJax-script" async src="js/tex-mml-chtml.js"></script>--}}
 @yield('bottomscript')
