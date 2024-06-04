@@ -166,6 +166,38 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - &&\
 apt-get install -y nodejs
 ```
 
+
+install python packages and virtual env
+```
+apt get-install python3-full
+sudo apt update
+sudo apt install pipx
+pipx ensurepath
+pipx completions
+pipx list
+eval "$(register-python-argcomplete pipx)"
+pipx install virtualenv
+virtualenv venv
+pipx install pipenv --python python3.8
+source venv/bin/activate
+pip3 install numpy
+pip3 install scipy
+pip3 install pandas
+pip3 install sympy
+pip3 install json
+
+
+
+pipx install numpy
+pipx install scipy --include-deps
+pipx install sympy
+pipx install pandas --include-deps
+pipx install json
+pipx install sys
+pipx install os
+```
+
+
 install python packages
 ```
 apt install python3-numpy
@@ -176,3 +208,33 @@ apt install python3-json
 apt install python3-sys
 apt install python3-os
 ```
+```
+sudo apt-get install -y python3-numpy
+sudo apt-get install -y python3-pandas
+sudo apt-get install -y python3-sympy
+sudo apt-get install -y python3-scipy
+sudo apt-get install -y python3-json
+sudo apt-get install -y python3-sys
+sudo apt-get install -y python3-os
+```
+
+python3 read-data.py 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' false
+python3 'read-data.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' true
+python3 'read-data.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' '1'
+python3 'fit-helicity-degree-large-N.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
+OPENBLAS_CORETYPE=ARMV8 python3 'fit-helicity-degree-large-N.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
+OPENBLAS_CORETYPE=ARMV8 python3 'read-data.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' true
+
+try to update (upgrade, check) sympy and scipy libraries
+python3 -c "import scipy; print(scipy.__version__)"
+python3 -c "import sympy; print(sympy.__version__)"
+python3 -c "import numpy; print(numpy.__version__)"
+python3 -c "import pandas; print(pandas.__version__)"
+python3 -c "import json; print(json.__version__)"
+python3 -c "import sys; print(sys.__version__)"
+python3 -c "import os; print(os.__version__)"
+
+python3 '../../read-data.py' '../../storage/cd-examples/large-n/Go et al/go-et-al-1.dat' '1'
+python3 '../../fit-helicity-degree-large-N.py' '../../storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
+source /var/www/html/fitting-app/venv/bin/activate && python3 '/var/www/html/fitting-app/read-data.py' '/var/www/html/fitting-app/storage/cd-examples/large-n/Go et al/go-et-al-1.dat' '1'
+source /var/www/html/fitting-app/venv/bin/activate && python3 'fit-helicity-degree-large-N.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
