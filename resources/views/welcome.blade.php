@@ -57,7 +57,7 @@
             </article>
         </section>
         <h5 class="mt-5 mb-5 d-flex justify-content-center text-danger">
-            By utilizing FitFoldData for your analysis, you acknowledge the importance of citing the publications that outline the original methods and reference data employed, along with referencing the specific papers associated with FitFoldData:
+            By utilizing FitFoldData for your analysis, you are kindly asked to cite the publications that outline the original methods and reference data employed, along with referencing the specific papers associated with FitFoldData:
         </h5>
         Badasyan, A., Tonoyan, S., Valant, M., & Grdadolnik, J. (2021). Implicit water model within the Zimm-Bragg approach to analyze experimental data for heat and cold denaturation of proteins. Communications chemistry, 4(1), 57.
         <a href="https://doi.org/10.1038/s42004-021-00499-x" target="_blank">DOI</a>
