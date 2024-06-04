@@ -43,7 +43,7 @@ class CalFitting extends Component
         $this->validate();
         $path = $this->data_file->getRealPath();
         $pythonpath = base_path('read-cal-data.py');
-        $process = new Process(['python3',$pythonpath,$path,$this->temperature,$this->unit]);
+        $process = new Process([env('PYTHON3_COMMAND'),$pythonpath,$path,$this->temperature,$this->unit]);
         $process->run();
 
         if (!$process->isSuccessful()) {
@@ -92,7 +92,7 @@ class CalFitting extends Component
         if (!$this->format_error) {
             $pythonpath = base_path('fit-cal-water-model.py');
             $path = $this->data_file->getRealPath();
-            $process = new Process(['python3', $pythonpath, $path, $this->temperature, $this->unit, $this->repeat_units,$this->init_t0,$this->init_h,$this->init_h_ps,$this->init_Q]);
+            $process = new Process([env('PYTHON3_COMMAND'), $pythonpath, $path, $this->temperature, $this->unit, $this->repeat_units,$this->init_t0,$this->init_h,$this->init_h_ps,$this->init_Q]);
             $process->run();
 
 // executes after the command finishes
