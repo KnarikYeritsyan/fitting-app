@@ -36,7 +36,7 @@ class FitData extends Component
         $this->validate();
         $path = $this->data_file->getRealPath();
         $pythonpath = base_path('read-data.py');
-        $process = new Process([env('PYTHON3_COMMAND'),$pythonpath,$path,$this->temperature]);
+        $process = new Process(['source /var/www/html/fitting-app/venv/bin/activate && python3 \'/var/www/html/fitting-app/read-data.py\' \'/var/www/html/fitting-app/storage/cd-examples/large-n/Go et al/go-et-al-1.dat\' \'true\'']);
         $process->run();
 
         if (!$process->isSuccessful()) {
@@ -74,7 +74,7 @@ class FitData extends Component
         if (!$this->format_error) {
             $pythonpath = base_path('fit-helicity-degree-large-N.py');
             $path = $this->data_file->getRealPath();
-            $process = new Process([env('PYTHON3_COMMAND'), $pythonpath, $path, $this->temperature]);
+            $process = new Process(['source /var/www/html/fitting-app/venv/bin/activate && python3 \'/var/www/html/fitting-app/fit-helicity-degree-large-N.py\' \'/var/www/html/fitting-app/storage/cd-examples/large-n/Go et al/go-et-al-1.dat\' \'true\'']);
             $process->run();
 
 // executes after the command finishes
