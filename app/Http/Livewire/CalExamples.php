@@ -52,7 +52,7 @@ class CalExamples extends Component
         $this->validate();
         $path = storage_path('cal-examples/'.$this->data_file);
         $pythonpath = base_path('read-cal-data.py');
-        $process = new Process([env('PYTHON3_COMMAND'),$pythonpath,$path,$this->temperature,$this->unit]);
+        $process = new Process([env('PYTHON3_COMMAND','/var/www/html/fitting-app/venv/bin/python3'),$pythonpath,$path,$this->temperature,$this->unit]);
         $process->run();
 
         if (!$process->isSuccessful()) {
@@ -97,7 +97,7 @@ class CalExamples extends Component
         if (!$this->format_error) {
             $pythonpath = base_path('fit-cal-water-model.py');
             $path = storage_path('app/public/cal-examples/'.$this->data_file);
-            $process = new Process([env('PYTHON3_COMMAND'), $pythonpath, $path, $this->temperature, $this->unit, $this->repeat_units,$this->init_t0,$this->init_h,$this->init_h_ps,$this->init_Q]);
+            $process = new Process([env('PYTHON3_COMMAND','/var/www/html/fitting-app/venv/bin/python3'), $pythonpath, $path, $this->temperature, $this->unit, $this->repeat_units,$this->init_t0,$this->init_h,$this->init_h_ps,$this->init_Q]);
             $process->run();
 
 // executes after the command finishes
