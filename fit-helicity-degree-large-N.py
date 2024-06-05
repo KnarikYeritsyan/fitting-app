@@ -1,4 +1,3 @@
-#!/venv/bin/python
 import numpy as np
 from sympy.abc import s,sigma,h,Q,o,p,T	#t_0 = o, h_ps = p
 from sympy.utilities.lambdify import lambdify

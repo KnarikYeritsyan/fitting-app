@@ -92,7 +92,7 @@ class PlotDataExample extends Component
         $this->output_data_n = [];
         if (!$this->format_error) {
             $pythonpath = base_path('fit-helicity-degree-small-N.py');
-            $path = storage_path('app/public/examples/small-n/'.$this->data_file_n);
+            $path = storage_path('cd-examples/small-n/'.$this->data_file_n);
             $process = new Process([env('PYTHON3_COMMAND','/var/www/html/fitting-app/venv/bin/python3'), $pythonpath, $path, $this->temperature, $this->repeat_units]);
             $process->run();
 
