@@ -218,6 +218,9 @@ sudo apt-get install -y python3-sys
 sudo apt-get install -y python3-os
 ```
 
+sudo chmod -R 777 /var/www/html/fitting-app/venv/bin/
+sudo chmod -R 777 /var/www/html/fitting-app/public
+
 python3 read-data.py 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' false
 python3 'read-data.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' true
 python3 'read-data.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' '1'
@@ -238,3 +241,6 @@ python3 '../../read-data.py' '../../storage/cd-examples/large-n/Go et al/go-et-a
 python3 '../../fit-helicity-degree-large-N.py' '../../storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
 source /var/www/html/fitting-app/venv/bin/activate && python3 '/var/www/html/fitting-app/read-data.py' '/var/www/html/fitting-app/storage/cd-examples/large-n/Go et al/go-et-al-1.dat' '1'
 source /var/www/html/fitting-app/venv/bin/activate && python3 'fit-helicity-degree-large-N.py' 'storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
+
+/var/www/html/fitting-app/venv/bin/python3 '/var/www/html/fitting-app/read-data.py' '/var/www/html/fitting-app/storage/cd-examples/large-n/Go et al/go-et-al-1.dat' '1'
+/var/www/html/fitting-app/venv/bin/python3 '/var/www/html/fitting-app/fit-helicity-degree-large-N.py' '/var/www/html/fitting-app/storage/cd-examples/large-n/Go et al/go-et-al-1.dat' 'true'
