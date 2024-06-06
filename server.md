@@ -187,3 +187,39 @@ deactivate
 #if needed
 sudo chmod -R 777 /var/www/html/fitting-app/venv/bin/
 ```
+
+###Install Certificate for server (SSL or CA)
+
+[install SSL self-signed certificate](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)
+```
+
+
+```
+[install CA(certificate authority) certificate (Lets encrypt)](https://www.youtube.com/watch?v=cMC5yxCR83I&ab_channel=RabiGurung)
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install certbot python3-certbot-apache apache2
+sudo certbot --help
+sudo certbot --apache
+#fill the following values
+Artem.Badasyan@ung.si
+Y
+N
+fit-fold-data.ung.si
+sudo nano /etc/apache2/sites-available/default-ssl.conf
+change the DocumentRoot option to /var/www/html/fitting-app/public
+change the ServerAdmin Artem.Badasyan@ung.si
+sudo systemctl restart apache2
+
+```
+
+[update Lets encrypt certificate](https://docs.digitalocean.com/support/how-can-i-renew-lets-encrypt-certificates/)
+```
+
+sudo apt-get update
+sudo certbot renew
+sudo certbot renew --dry-run
+
+```
